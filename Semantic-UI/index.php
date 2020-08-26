@@ -55,7 +55,7 @@
 								$i = 0;
 
                                 foreach (glob('*', GLOB_ONLYDIR) as $directory):
-                                	$url = "http://{$directory}.local";
+                                	$virtualhost = "http://{$directory}.local";
 									$created_on = date("F d Y H:i:s", filemtime($directory));
 									
 									$i++;
@@ -63,7 +63,8 @@
                                 <div class="item">
                                     <i class="large folder outline middle aligned icon"></i>
                                     <div class="content">
-                                        <a href="<?php echo $url; ?>" class="header"><?php echo $url; ?></a>
+                                        <a href="<?php echo $virtualhost; ?>" class="header"><?php echo $virtualhost; ?></a>
+                                        <a href="<?php echo $virtualhost; ?>" class="header"><?php echo $virtualhost; ?></a>
                                         <div class="description">Created on: <?php echo $created_on; ?></div>
                                     </div>
                                 </div>
